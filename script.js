@@ -19,7 +19,7 @@ const closeBtn = document.querySelector(".close")
 function fetchRequest(file, formResponse) {
     infoText.innerText = "Scanning QR Code...";
     // Fetching qr code content form the QRserver API (http://api.qrserver.com/v1/read-qr-code/)
-    fetch("http://api.qrserver.com/v1/read-qr-code/", {
+    fetch("https://api.qrserver.com/v1/read-qr-code/", {
         method: 'POST', body: formResponse
     }).then(res => res.json()).then(d => {
         result = d[0].symbol[0].data;
